@@ -1,64 +1,70 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# 🎓 English Master - Learn English with Expert-Led Online Courses
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+A comprehensive English learning platform built with modern web technologies, designed to help students master English from basics to advanced levels. Created by [Taskkora](https://taskkora.com) - A Freelancing Marketplace.
 
-## ✨ Technology Stack
+## ✨ Features
 
-This scaffold provides a robust foundation built with:
+### 🎯 Core Learning System
+- **📚 9 Comprehensive Courses** - From English basics to IELTS preparation
+- **🎮 Interactive Letter Matching Game** - Candy Crush-style game with English letters
+- **🏆 Point-Based Learning System** - Earn points to unlock advanced courses
+- **📊 Progress Tracking** - Monitor your learning journey with detailed analytics
+- **🎖️ Certificates** - Earn certificates upon course completion
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+### 🎨 Modern User Interface
+- **📱 Fully Responsive Design** - Works perfectly on mobile, tablet, and desktop
+- **🌙 Dark/Light Mode Support** - Comfortable viewing in any environment
+- **✨ Smooth Animations** - Engaging micro-interactions and transitions
+- **🎯 Accessible Design** - Built with web accessibility best practices
 
-### 🧩 UI Components & Styling
+### 💻 Technology Stack
+
+#### 🎯 Core Framework
+- **⚡ Next.js 15** - React framework with App Router for optimal performance
+- **📘 TypeScript 5** - Type-safe development for better code quality
+- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid styling
+
+#### 🧩 UI Components & Styling
 - **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
 - **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+- **🌈 Professional Design** - Custom color scheme with #0a233b and yellow accents
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+#### 🗄️ Database & Backend
+- **🗄️ Prisma ORM** - Type-safe database operations with SQLite
+- **🔐 Authentication Ready** - NextAuth.js integration for secure user management
+- **📊 User Management** - Points system, course enrollment, and progress tracking
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
+#### 🎮 Interactive Features
+- **🎮 Mini Game** - Unlimited letter-matching gameplay
+- **📰 Blog System** - Educational content and learning tips
+- **💬 Testimonials** - Auto-scrolling student feedback display
+- **🔍 Smart Search** - Course search with real-time suggestions
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
+## 🎯 Learning Paths
 
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
+### 🆓 Free Course
+- **English Basics** - Fundamental grammar, vocabulary, and communication skills
 
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
+### 🏆 Points-Based Courses (2-8)
+- **Grammar Master** (150 points) - Comprehensive grammar training
+- **Vocabulary Builder** (200 points) - 3000+ essential words
+- **Speaking Skills** (250 points) - Pronunciation and conversation practice
+- **Writing Excellence** (300 points) - Essay and professional writing
+- **Listening Comprehension** (350 points) - Various accents and contexts
+- **Business English** (400 points) - Professional communication
+- **Advanced Fluency** (500 points) - Native-like proficiency
 
-## 🎯 Why This Scaffold?
-
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
+### 💎 Premium Course
+- **IELTS Preparation** (৳3,000) - Complete test preparation with band 7+ guarantee
 
 ## 🚀 Quick Start
 
 ```bash
 # Install dependencies
 npm install
+
+# Set up database
+npm run db:push
 
 # Start development server
 npm run dev
@@ -70,72 +76,162 @@ npm run build
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
-
-## 🤖 Powered by Z.ai
-
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
-
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
-
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
+Open [http://localhost:3000](http://localhost:3000) to see the application running.
 
 ## 📁 Project Structure
 
 ```
 src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
+├── app/                    # Next.js App Router pages
+│   ├── page.tsx           # Homepage with hero section
+│   ├── pricing/           # Pricing plans page
+│   ├── courses/           # Course listing page
+│   ├── game/              # Letter matching game
+│   └── blog/              # Educational blog
+├── components/
+│   ├── layout/            # Header, Footer, Credit components
+│   ├── sections/          # Homepage sections (Hero, Courses, Testimonials)
+│   ├── game/              # Game components
+│   └── ui/                # shadcn/ui components
+├── hooks/                 # Custom React hooks
+├── lib/                   # Utility functions and configurations
+└── prisma/                # Database schema and migrations
 ```
 
-## 🎨 Available Features & Components
+## 🎮 Game Features
 
-This scaffold includes a comprehensive set of modern web development tools:
+### Letter Matching Game
+- **🎯 8x8 Grid** - Colorful letter tiles with vowel/consonant distinction
+- **🔄 Match Mechanics** - Match 2, 3, or 4 letters horizontally or vertically
+- **🏆 Scoring System** - Points, combos, levels, and high scores
+- **🎨 Visual Feedback** - Smooth animations and color-coded tiles
+- **♾️ Unlimited Gameplay** - Play forever with increasing difficulty
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+### Game Controls
+- **Click to Select** - Click a letter, then click an adjacent letter to swap
+- **Auto-Match Detection** - Automatic detection and removal of matches
+- **Combo System** - Build combos for bonus points
+- **Level Progression** - Difficulty increases as you advance
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+## 🎨 Design System
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+### Color Palette
+- **Primary Blue**: `#0a233b` - Main brand color for headers and backgrounds
+- **Accent Yellow**: `#facc15` - Buttons, highlights, and call-to-action elements
+- **Text Colors**: White on dark backgrounds, dark on light backgrounds
+- **Hover Effects**: Color reversal for interactive elements
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
+### Typography
+- **Headings**: Bold, large text with proper hierarchy
+- **Body Text**: Clean, readable fonts with optimal line height
+- **Responsive**: Scales appropriately across all device sizes
 
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
+### Component Design
+- **Cards**: Rounded corners with shadows and hover effects
+- **Buttons**: Consistent styling with hover state animations
+- **Forms**: Clean, accessible form elements with proper validation
+- **Navigation**: Mobile-responsive with hamburger menu
 
-## 🤝 Get Started with Z.ai
+## 🔧 Development Features
 
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+### 📝 Code Quality
+- **TypeScript** - Full type safety across the application
+- **ESLint** - Code linting for consistent style
+- **Prettier** - Code formatting for maintainability
+- **React Best Practices** - Modern hooks and patterns
+
+### 🎯 Performance
+- **Next.js Optimizations** - Automatic code splitting and caching
+- **Image Optimization** - Responsive images with lazy loading
+- **Bundle Optimization** - Minimal JavaScript for fast loading
+- **SEO Ready** - Proper meta tags and structured data
+
+### 🔐 Security
+- **Input Validation** - Protection against XSS and injection attacks
+- **Authentication** - Secure user management system
+- **Data Protection** - Safe handling of user information
+- **API Security** - Protected routes and rate limiting
+
+## 🌐 Pages & Routes
+
+### Main Pages
+- **Homepage** (`/`) - Hero section, course cards, testimonials
+- **Pricing** (`/pricing`) - Detailed pricing plans and features
+- **Courses** (`/courses`) - Browse all courses with filtering
+- **Game** (`/game`) - Play the letter matching game
+- **Blog** (`/blog`) - Educational articles and learning tips
+
+### Navigation Features
+- **Smart Search Bar** - Real-time course suggestions
+- **Mobile Menu** - Hamburger menu for mobile devices
+- **Breadcrumbs** - Easy navigation tracking
+- **Footer Links** - Quick access to important pages
+
+## 🏆 Student Features
+
+### Learning Management
+- **Course Enrollment** - Easy enrollment in free and paid courses
+- **Progress Tracking** - Monitor completion percentages
+- **Points System** - Earn and spend points on course access
+- **Achievement Badges** - Celebrate learning milestones
+
+### Community Features
+- **Testimonials** - Share learning experiences
+- **Student Reviews** - Rate and review courses
+- **Discussion Forums** - Connect with other learners
+- **Leaderboards** - Compete in games and challenges
+
+## 📊 Admin Features
+
+### Course Management
+- **Course Creation** - Add new courses with lessons and content
+- **Content Editing** - Update course materials and descriptions
+- **Student Progress** - Monitor individual and class performance
+- **Payment Processing** - Approve premium course purchases
+
+### User Management
+- **Student Accounts** - Manage user profiles and permissions
+- **Point Allocation** - Award points for course completion
+- **Support Tickets** - Handle student inquiries and issues
+- **Analytics Dashboard** - Track platform usage and engagement
+
+## 🎯 Educational Philosophy
+
+### Learning Approach
+- **Gamification** - Make learning fun and engaging
+- **Progressive Difficulty** - Start easy and gradually increase complexity
+- **Practical Application** - Real-world scenarios and examples
+- **Multimedia Content** - Videos, audio, and interactive exercises
+
+### Assessment Methods
+- **Quizzes and Tests** - Regular knowledge checks
+- **Speaking Practice** - Pronunciation and conversation exercises
+- **Writing Assignments** - Structured writing tasks with feedback
+- **Progress Reviews** - Comprehensive skill assessments
+
+## 🤝 Contributing
+
+This project is developed and maintained by Taskkora. For contributions:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📞 Support
+
+For support or inquiries:
+- **Email**: support@englishmaster.com
+- **Website**: [English Master](https://englishmaster.com)
+- **Developer**: [Taskkora](https://taskkora.com)
+
+## 📄 License
+
+This project is proprietary software developed by Taskkora. All rights reserved.
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+Built with ❤️ by [Taskkora](https://taskkora.com) - A Freelancing Marketplace
+
+🚀 *Master English, Master Your Future*

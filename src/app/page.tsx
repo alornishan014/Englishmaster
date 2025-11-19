@@ -1,13 +1,21 @@
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import Credit from '@/components/layout/Credit'
+import HeroSection from '@/components/sections/HeroSection'
+import CourseCardsSection from '@/components/sections/CourseCardsSection'
+import TestimonialSection from '@/components/sections/TestimonialSection'
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-8 p-4">
-      <div className="relative w-24 h-24 md:w-32 md:h-32">
-        <img
-          src="/logo.svg"
-          alt="Z.ai Logo"
-          className="w-full h-full object-contain"
-        />
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <HeroSection />
+        <CourseCardsSection />
+        <TestimonialSection />
+      </main>
+      <Footer />
+      <Credit />
     </div>
   )
 }

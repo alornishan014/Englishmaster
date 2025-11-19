@@ -17,16 +17,130 @@ model User {
   id        String   @id @default(cuid())
   email     String   @unique
   name      String?
+  password  String
+  points    Int      @default(0)
+  isAdmin   Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  
+  // Relations
+  enrollments Enrollment[]
+  payments    Payment[]
+  testimonials Testimonial[]
+  gameScores  GameScore[]
 }
 
-model Post {
+model Course {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  type        CourseType @default(FREE)
+  price       Int      @default(0) // in BDT
+  pointsRequired Int    @default(0)
+  level       String   @default("beginner")
+  duration    String   @default("30 days")
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  lessons     Lesson[]
+  enrollments Enrollment[]
+  
+  @@map("courses")
+}
+
+model Lesson {
+  id          String   @id @default(cuid())
+  title       String
+  content     String
+  courseId    String
+  order       Int      @default(0)
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  course      Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  
+  @@map("lessons")
+}
+
+model Enrollment {
+  id         String   @id @default(cuid())
+  userId     String
+  courseId   String
+  progress   Float    @default(0) // percentage
+  completed  Boolean  @default(false)
+  startedAt  DateTime @default(now())
+  completedAt DateTime?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  
+  // Relations
+  user       User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course     Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  
+  @@unique([userId, courseId])
+  @@map("enrollments")
+}
+
+model Payment {
+  id            String       @id @default(cuid())
+  userId        String
+  courseId      String
+  amount        Int
+  currency      String       @default("BDT")
+  status        PaymentStatus @default(PENDING)
+  transactionId String?      @unique
+  approvedAt    DateTime?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  
+  // Relations
+  user          User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@map("payments")
+}
+
+model Testimonial {
   id        String   @id @default(cuid())
-  title     String
-  content   String?
-  published Boolean  @default(false)
-  authorId  String
+  userId    String
+  content   String
+  rating    Int      @default(5)
+  isApproved Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  
+  // Relations
+  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@map("testimonials")
+}
+
+model GameScore {
+  id        String   @id @default(cuid())
+  userId    String
+  score     Int
+  level     Int      @default(1)
+  moves     Int
+  createdAt DateTime @default(now())
+  
+  // Relations
+  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@map("game_scores")
+}
+
+enum CourseType {
+  FREE
+  PREMIUM
+  POINTS
+}
+
+enum PaymentStatus {
+  PENDING
+  APPROVED
+  REJECTED
 }
