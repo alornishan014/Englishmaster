@@ -350,58 +350,58 @@ const WordMatchingGame = () => {
     <section className="py-20 bg-gradient-to-br from-[#0a233b] to-[#1a3a52]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-8 sm:mb-12 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
             Word Matching <span className="text-yellow-400">Game</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
             Match English words to score points! Just like Candy Crush, but with educational value.
             Match 2 or more same words horizontally or vertically.
           </p>
           
           {/* Game Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-4 max-w-4xl mx-auto mb-6 sm:mb-8 px-4">
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-4 text-center">
-                <div className="text-yellow-400 text-2xl font-bold">{gameStats.score}</div>
-                <div className="text-gray-300 text-sm">Score</div>
+              <CardContent className="p-2 sm:p-4 text-center">
+                <div className="text-yellow-400 text-lg sm:text-2xl font-bold">{gameStats.score}</div>
+                <div className="text-gray-300 text-xs sm:text-sm">Score</div>
               </CardContent>
             </Card>
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-4 text-center">
-                <div className="text-blue-400 text-2xl font-bold">{gameStats.moves}</div>
-                <div className="text-gray-300 text-sm">Moves</div>
+              <CardContent className="p-2 sm:p-4 text-center">
+                <div className="text-blue-400 text-lg sm:text-2xl font-bold">{gameStats.moves}</div>
+                <div className="text-gray-300 text-xs sm:text-sm">Moves</div>
               </CardContent>
             </Card>
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-4 text-center">
-                <div className="text-green-400 text-2xl font-bold">{gameStats.level}</div>
-                <div className="text-gray-300 text-sm">Level</div>
+              <CardContent className="p-2 sm:p-4 text-center">
+                <div className="text-green-400 text-lg sm:text-2xl font-bold">{gameStats.level}</div>
+                <div className="text-gray-300 text-xs sm:text-sm">Level</div>
               </CardContent>
             </Card>
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-4 text-center">
-                <div className="text-purple-400 text-2xl font-bold">{gameStats.combo}x</div>
-                <div className="text-gray-300 text-sm">Combo</div>
+              <CardContent className="p-2 sm:p-4 text-center">
+                <div className="text-purple-400 text-lg sm:text-2xl font-bold">{gameStats.combo}x</div>
+                <div className="text-gray-300 text-xs sm:text-sm">Combo</div>
               </CardContent>
             </Card>
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-4 text-center">
-                <div className="text-red-400 text-2xl font-bold">{formatTime(gameStats.timeLeft)}</div>
-                <div className="text-gray-300 text-sm">Time</div>
+              <CardContent className="p-2 sm:p-4 text-center">
+                <div className="text-red-400 text-lg sm:text-2xl font-bold">{formatTime(gameStats.timeLeft)}</div>
+                <div className="text-gray-300 text-xs sm:text-sm">Time</div>
               </CardContent>
             </Card>
           </div>
 
           {/* Game Controls */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 px-4">
             {!gameStats.isPlaying ? (
               <Button 
                 onClick={startGame}
-                className="bg-yellow-400 text-[#0a233b] hover:bg-yellow-300 px-8 py-4 text-lg font-semibold"
+                className="bg-yellow-400 text-[#0a233b] hover:bg-yellow-300 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold"
                 size="lg"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Start Game
               </Button>
             ) : (
@@ -409,7 +409,7 @@ const WordMatchingGame = () => {
                 <Button 
                   onClick={pauseGame}
                   variant="outline"
-                  className="bg-white/10 border-white/20 text-white hover:bg-white/20 px-6 py-3"
+                  className="bg-white/10 border-white/20 text-white hover:bg-white/20 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base"
                 >
                   <Pause className="w-4 h-4 mr-2" />
                   Pause
@@ -417,7 +417,7 @@ const WordMatchingGame = () => {
                 <Button 
                   onClick={startGame}
                   variant="outline"
-                  className="bg-white/10 border-white/20 text-white hover:bg-white/20 px-6 py-3"
+                  className="bg-white/10 border-white/20 text-white hover:bg-white/20 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base"
                 >
                   <RefreshCw className="w-4 h-4 mr-2" />
                   New Game
@@ -429,16 +429,16 @@ const WordMatchingGame = () => {
 
         {/* Game Grid */}
         {gameStats.isPlaying && (
-          <div className="flex justify-center mb-8">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6">
-              <div className="grid grid-cols-8 gap-1 max-w-2xl">
+          <div className="flex justify-center mb-8 px-4">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-4 w-full max-w-2xl">
+              <div className="grid grid-cols-6 sm:grid-cols-7 md:grid-cols-8 gap-1 mx-auto" style={{ width: 'fit-content' }}>
                 {grid.map((row, rowIndex) =>
                   row.map((tile, colIndex) => (
                     <button
                       key={tile.id}
                       onClick={() => handleTileClick(tile)}
                       className={`
-                        w-12 h-12 md:w-14 md:h-14 rounded-lg font-bold text-sm md:text-base
+                        w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg font-bold text-xs sm:text-sm md:text-base
                         transition-all duration-300 transform hover:scale-105
                         ${getTileColor(tile.word, selectedTile?.id === tile.id, tile.isMatched, tile.isAnimating)}
                         shadow-lg
@@ -453,14 +453,14 @@ const WordMatchingGame = () => {
               {/* Current Word Display */}
               {currentWord && (
                 <div className="mt-4 text-center">
-                  <div className="inline-flex items-center space-x-2 bg-white/20 rounded-lg px-4 py-2">
-                    <span className="text-white font-semibold">Selected:</span>
-                    <span className="text-yellow-400 font-bold">{currentWord}</span>
+                  <div className="inline-flex items-center space-x-2 bg-white/20 rounded-lg px-3 sm:px-4 py-2">
+                    <span className="text-white font-semibold text-sm sm:text-base">Selected:</span>
+                    <span className="text-yellow-400 font-bold text-sm sm:text-base">{currentWord}</span>
                     <button
                       onClick={() => speakWord(currentWord)}
                       className="text-yellow-400 hover:text-yellow-300 transition-colors"
                     >
-                      <Volume2 className="w-4 h-4" />
+                      <Volume2 className="w-4 h-4 sm:w-5 sm:h-5" />
                     </button>
                   </div>
                 </div>
@@ -471,14 +471,14 @@ const WordMatchingGame = () => {
 
         {/* Matched Words Display */}
         {matchedWords.length > 0 && (
-          <div className="text-center mb-8">
-            <h3 className="text-xl font-semibold text-white mb-4">Words You've Matched:</h3>
-            <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+          <div className="text-center mb-6 sm:mb-8 px-4">
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Words You've Matched:</h3>
+            <div className="flex flex-wrap justify-center gap-1 sm:gap-2 max-w-4xl mx-auto">
               {matchedWords.map((word, index) => (
                 <Badge
                   key={index}
                   variant="secondary"
-                  className="bg-green-500 text-white hover:bg-green-600 transition-colors"
+                  className="bg-green-500 text-white hover:bg-green-600 transition-colors text-xs sm:text-sm px-2 sm:px-3 py-1"
                 >
                   {word}
                 </Badge>
@@ -489,57 +489,57 @@ const WordMatchingGame = () => {
 
         {/* Game Instructions */}
         {!gameStats.isPlaying && (
-          <div className="text-center max-w-4xl mx-auto">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">How to Play</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                <div className="space-y-4">
+          <div className="text-center max-w-4xl mx-auto px-4">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-4 sm:p-6 lg:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">How to Play</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-left">
+                <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-yellow-400 text-[#0a233b] rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-yellow-400 text-[#0a233b] rounded-full flex items-center justify-center font-bold text-sm sm:text-base flex-shrink-0">1</div>
                     <div>
-                      <h4 className="text-white font-semibold">Click to Select</h4>
-                      <p className="text-gray-300 text-sm">Click a word tile, then click an adjacent word to swap them</p>
+                      <h4 className="text-white font-semibold text-sm sm:text-base">Click to Select</h4>
+                      <p className="text-gray-300 text-xs sm:text-sm">Click a word tile, then click an adjacent word to swap them</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-yellow-400 text-[#0a233b] rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-yellow-400 text-[#0a233b] rounded-full flex items-center justify-center font-bold text-sm sm:text-base flex-shrink-0">2</div>
                     <div>
-                      <h4 className="text-white font-semibold">Match Words</h4>
-                      <p className="text-gray-300 text-sm">Match 2 or more same words horizontally or vertically</p>
+                      <h4 className="text-white font-semibold text-sm sm:text-base">Match Words</h4>
+                      <p className="text-gray-300 text-xs sm:text-sm">Match 2 or more same words horizontally or vertically</p>
                     </div>
                   </div>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-yellow-400 text-[#0a233b] rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-yellow-400 text-[#0a233b] rounded-full flex items-center justify-center font-bold text-sm sm:text-base flex-shrink-0">3</div>
                     <div>
-                      <h4 className="text-white font-semibold">Score Points</h4>
-                      <p className="text-gray-300 text-sm">Longer matches give more points. Build combos for bonus points!</p>
+                      <h4 className="text-white font-semibold text-sm sm:text-base">Score Points</h4>
+                      <p className="text-gray-300 text-xs sm:text-sm">Longer matches give more points. Build combos for bonus points!</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-yellow-400 text-[#0a233b] rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-yellow-400 text-[#0a233b] rounded-full flex items-center justify-center font-bold text-sm sm:text-base flex-shrink-0">4</div>
                     <div>
-                      <h4 className="text-white font-semibold">Learn English</h4>
-                      <p className="text-gray-300 text-sm">Click the speaker icon to hear word pronunciation</p>
+                      <h4 className="text-white font-semibold text-sm sm:text-base">Learn English</h4>
+                      <p className="text-gray-300 text-xs sm:text-sm">Click the speaker icon to hear word pronunciation</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-white/20">
-                <div className="flex items-center justify-center space-x-4 text-gray-300">
+              <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/20">
+                <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-gray-300 text-xs sm:text-sm">
                   <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-blue-500 rounded"></div>
-                    <span className="text-sm">Easy words (3-4 letters)</span>
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded"></div>
+                    <span>Easy words (3-4 letters)</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-purple-500 rounded"></div>
-                    <span className="text-sm">Medium words (5-6 letters)</span>
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 rounded"></div>
+                    <span>Medium words (5-6 letters)</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-red-500 rounded"></div>
-                    <span className="text-sm">Hard words (7+ letters)</span>
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 bg-red-500 rounded"></div>
+                    <span>Hard words (7+ letters)</span>
                   </div>
                 </div>
               </div>
@@ -548,14 +548,14 @@ const WordMatchingGame = () => {
         )}
 
         {/* CTA to Full Game */}
-        <div className="text-center mt-12">
-          <p className="text-gray-300 mb-4">Want more challenges and features?</p>
+        <div className="text-center mt-8 sm:mt-12 px-4">
+          <p className="text-gray-300 mb-4 text-sm sm:text-base">Want more challenges and features?</p>
           <Button 
             size="lg"
-            className="bg-yellow-400 text-[#0a233b] hover:bg-yellow-300 px-8 py-4 text-lg font-semibold"
+            className="bg-yellow-400 text-[#0a233b] hover:bg-yellow-300 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold"
             onClick={() => window.location.href = '/game'}
           >
-            <Trophy className="w-5 h-5 mr-2" />
+            <Trophy className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Play Full Game
           </Button>
         </div>
